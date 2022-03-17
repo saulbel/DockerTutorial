@@ -20,7 +20,7 @@ LanaShop
     └── setup.sh
 ```
 ## Tasks to accomplish
-- Create docker container that run nginx with a custom htlm --> index.htlm
+- Create docker container that run `nginx` with a custom htlm --> index.htlm
 - This index.html should be mounted from specific folder in the repo --> ./custom/index.html
 - This docker container should be deployed using docker-compose --> docker-compose.yml
 - This docker container needs to listen (internally) as port 8080 and in host needs to listen at port 80.
