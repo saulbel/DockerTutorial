@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  nginx-test:
+    build: .
+    ports: 
+      - "8080:80"
+    volumes:
+      - /opt/nginx/conf.d/nginx-test:/etc/nginx/conf.d"
