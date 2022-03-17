@@ -4,3 +4,5 @@ services:
     build: .
     ports: 
       - "80:8080"
+    volumes:
+      - /opt/nginx/conf.d/nginx-test:/etc/nginx/conf.d"
