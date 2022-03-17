@@ -24,10 +24,10 @@ LanaShop
 - This index.html should be mounted from specific folder in the repo --> ./custom/index.html
 - This docker container should be deployed using `docker-compose` --> docker-compose.yml
 - This docker container needs to listen (internally) as port 8080 and in host needs to listen at port 80.
-- In this docker container should contain the following tools `netstat`, `curl` and `vim` --> ./custom/setup.sh
+- This docker container should contain the following tools `netstat`, `curl` and `vim` --> ./custom/setup.sh
 
 ## How to install Docker and Docker-compose
-I have included a custom script that allows you to install docker and docker-compose on `Debian`.
+I have included a custom script that allows you to install both `docker` and `docker-compose` on `Debian`.
 I recommend to download it and change it with your `username` because I have decided to add my `user` to `docker group`. It is a good practice to run docker with a user instead of as `root`.
 
 ## How to setup this project locally
