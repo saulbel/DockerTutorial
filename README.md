@@ -2,15 +2,16 @@
 
 ## Prerequisites
 Things you need before starting:
+* `Debian`
 * `Docker`
 * `Docker-compose`
-* `Debian`
 
 ## Project structure
 ```
 LanaShop
 ├── Dockerfile
-├── docker.compose.yml
+├── docker-compose.yml
+├── docker-compose_vm.yml
 ├── setup_vm.sh
 ├── README.md
 └── .custom
