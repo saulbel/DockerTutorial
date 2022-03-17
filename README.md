@@ -41,8 +41,8 @@ dc00238beaf1   dockertutorial_nginx-test   "/docker-entrypoint.…"   28 minutes
 ````
 - Now we just have to test it with `curl`.
 ````
-$ curl localhost:8080 --> host
-$ curl localhost:80   --> inside container
+$ curl localhost:80     --> host
+$ curl localhost:8080   --> inside container
 ````
 ## What about docker volumes
 Let´s say we already have our `debian-server` and we want to install `nginx` as docker container. Then we will use `docker-volumes` in our `docker-compose` --> docker.compose_vm.sh. We just need to point the directory where our `nginx.config` is and put it in `/etc/nginx/conf.d`
