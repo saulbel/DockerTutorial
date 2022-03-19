@@ -8,16 +8,18 @@ Things you need before starting:
 
 ## Project structure
 ```
-LanaShop
-├── Dockerfile
-├── docker-compose.yml
-├── docker-compose_vm.yml
-├── setup_vm.sh
-├── README.md
-└── .custom
-    └── index.html
-    └── nginx.conf
-    └── setup.sh
+docker-tutorial
+|── Dockerfile
+|── docker-compose.yml
+|── docker-compose_vm.yml
+|── setup_vm.sh
+|── README.md
+|── .custom
+|    └── index.html
+|    └── nginx.conf
+|    └── setup.sh
+└── .github/workflows/
+     └── docker-publish.yml
 ```
 ## Tasks to accomplish
 - Create docker container that run `nginx` with a custom htlm --> index.htlm
@@ -47,7 +49,15 @@ $ curl localhost:8080   --> inside container
 ## What about docker volumes
 Let´s say we already have our `debian-server` and we want to install `nginx` as docker container. Then we will use `docker-volumes` in our `docker-compose` --> docker.compose_vm.sh. We just need to point the directory where our `nginx.config` is and put it in `/etc/nginx/conf.d`
 
-## Next steps
-I will update this with the following tasks:
-- Build a CI a pipeline with `GitHub Actions`that compile and pushes a custom `docker-image` into a `DockerHub` container repo.
+## GitHub Actions
+I have built a CI pipeline that builds a custom `nginx` docker image with `Dockerfile` and pushes it into GitHub container registry  `ghcr.io`. If I want to pull new `docker image` we just have to:
+````
+$ docker pull ghcr.io/saulbel/docker-tutorial:main
+$ docker images
+REPOSITORY                        TAG       IMAGE ID       CREATED          SIZE
+ghcr.io/saulbel/docker-tutorial   main      e75801090259   48 minutes ago   209MB
+````
+
+## To improve
+-  As we can see, our `docker image` is quite big because I have decided to use `nginx` as image instead of `nginx:alpine`, which is much lighter. 
 -  Spin up more containers with `docker-compose` and play around with `nginx-config`.
