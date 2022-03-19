@@ -27,6 +27,7 @@ docker-tutorial
 - This docker container should be deployed using `docker-compose` --> docker-compose.yml
 - This docker container needs to listen (internally) as port 8080 and in host needs to listen at port 80.
 - This docker container should contain the following tools `netstat`, `curl` and `vim` --> ./custom/setup.sh
+- Build CI pipeline that pushes the docker image into a container registry.
 
 ## How to install Docker and Docker-compose
 I have included a custom script that allows you to install both `docker` and `docker-compose` on `Debian`.
