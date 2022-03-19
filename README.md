@@ -51,7 +51,7 @@ $ curl localhost:8080   --> inside container
 Let´s say we already have our `debian-server` and we want to install `nginx` as docker container. Then we will use `docker-volumes` in our `docker-compose` --> docker.compose_vm.sh. We just need to point the directory where our `nginx.config` is and put it in `/etc/nginx/conf.d`
 
 ## GitHub Actions
-I have built a CI pipeline that builds a custom `nginx` docker image with `Dockerfile` and pushes it into GitHub container registry  `ghcr.io`. If I want to pull new `docker image` we just have to:
+I have built a CI pipeline that builds a custom `nginx` docker image with `Dockerfile` and pushes it into GitHub container registry  `ghcr.io`. If I want to pull new `docker image` I will just have to:
 ````
 $ docker pull ghcr.io/saulbel/docker-tutorial:main
 $ docker images
